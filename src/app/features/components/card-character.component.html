@@ -1,0 +1,10 @@
+<div *ngIf="character.length > 0">
+    <div *ngFor="let char of character">
+      <h3>{{ char.name }}</h3>
+      <p>{{ char.species }}</p>
+      <img [src]="char.image" alt="{{ char.name }}">
+    </div>
+  </div>
+  <div *ngIf="character.length === 0">
+    <p>No characters found.</p>
+</div>
