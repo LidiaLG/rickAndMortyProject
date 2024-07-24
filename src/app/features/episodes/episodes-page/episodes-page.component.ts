@@ -15,7 +15,7 @@ export class EpisodesPageComponent {
 
   //cogemos del servicio la función genérica para pararle las propiedades de location por columna
   ngOnInit(): void {
-    this.dataService.getData<IEpisode>('location').subscribe(
+    this.dataService.getData<IEpisode>('episode').subscribe(
       data => this.episodeData = data
     );
   }

@@ -5,17 +5,15 @@ import { CharacterDetailsPageComponent } from '../../characters/character-detail
 
 const routes: Routes = [
   {
-    path: '', children: [
+    path: '', component: CharactersPageComponent,
+     children: [
       {
-        path: 'characters', component: CharactersPageComponent
+        path: ':id', component: CharacterDetailsPageComponent
       },
-      {
-        path: ':id', children: [
-          {
-            path: '', component: CharacterDetailsPageComponent
-          }
-        ]
-      }
+      // {
+      //   path: ':id', children: [
+      //   ]
+      // }
     ]
   }
   

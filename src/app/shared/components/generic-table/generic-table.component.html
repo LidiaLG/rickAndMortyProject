@@ -1,3 +1,4 @@
+<!-- generic-table.component.html -->
 <table>
   <thead>
     <tr>
@@ -6,7 +7,21 @@
   </thead>
   <tbody>
     <tr *ngFor="let row of data">
-      <td *ngFor="let column of columns">{{ row[column] }}</td>
+      <td *ngFor="let column of columns" [ngClass]="{'residents-column': column === 'residents'}">
+        <ng-container *ngIf="column === 'residents'; else defaultContent">
+          <!-- Custom content for residents column -->
+          <ng-container *ngFor="let resident of row[column]">{{ resident }}<br></ng-container>
+        </ng-container>
+        <ng-template #defaultContent>
+          <ng-container *ngIf="column === 'created'; else defaultView">
+            <!-- Applying DatePipe to format the date -->
+            {{ row[column] | dateFormat }}
+          </ng-container>
+          <ng-template #defaultView>
+            {{ row[column] }}
+          </ng-template>
+        </ng-template>
+      </td>
     </tr>
   </tbody>
 </table>

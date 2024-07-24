@@ -4,7 +4,8 @@ import { Error404PageComponent } from './pages/error-404-page/error-404-page.com
 import { DirectionBtnComponent } from './components/direction-btn/direction-btn.component';
 import { GenericCardComponent } from './components/generic-card/generic-card.component';
 import { GenericTableComponent } from './components/generic-table/generic-table.component';
-
+import { WordLimitPipe } from './pipes/word-limit.pipe';
+import { DateFormatPipe } from './pipes/date-format.pipe';
 
 
 @NgModule({
@@ -12,7 +13,9 @@ import { GenericTableComponent } from './components/generic-table/generic-table.
     Error404PageComponent,
     DirectionBtnComponent,
     GenericCardComponent,
-    GenericTableComponent
+    GenericTableComponent,
+    WordLimitPipe,
+    DateFormatPipe,
   ],
   imports: [
     CommonModule

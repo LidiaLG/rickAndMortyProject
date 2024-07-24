@@ -19,5 +19,10 @@ export class LocationsPageComponent implements OnInit{
       data => this.locationData = data
     );
   }
-
+  // ngOnInit(): void {
+  //   this.dataService.getLocation().subscribe(
+  //     data => this.locationData = data
+  //   );
 }
+
+
