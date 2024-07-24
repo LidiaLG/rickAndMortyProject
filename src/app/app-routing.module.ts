@@ -4,6 +4,7 @@ import { HomePageComponent } from './features/home/home-page/home-page.component
 import { Error404PageComponent } from './shared/pages/error-404-page/error-404-page.component';
 import { LocationsPageComponent } from './features/location/locations-page/locations-page.component';
 import { EpisodesPageComponent } from './features/episodes/episodes-page/episodes-page.component';
+import { CharactersPageComponent } from './features/characters/characters-page/characters-page.component';
 
 const routes: Routes = [
   {
@@ -14,10 +15,10 @@ const routes: Routes = [
       .then(m => m.FeaturesModule)
   },
   {
-    path: 'locations', component: LocationsPageComponent
+    path: 'location', component: LocationsPageComponent
   },
   {
-    path: 'episodes', component: EpisodesPageComponent
+    path: 'episode', component: EpisodesPageComponent
   },
   {
     path: '**', component: Error404PageComponent

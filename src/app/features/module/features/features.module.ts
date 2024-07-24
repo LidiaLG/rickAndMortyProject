@@ -4,6 +4,7 @@ import { FeaturesRoutingModule } from './features-routing.module';
 
 import { CharactersPageComponent } from '../../characters/characters-page/characters-page.component';
 import { CharacterDetailsPageComponent } from '../../characters/character-details-page/character-details-page.component';
+import { SharedModule } from '../../../shared/shared.module';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { CharacterDetailsPageComponent } from '../../characters/character-detail
   ],
   imports: [
     CommonModule,
-    FeaturesRoutingModule
+    FeaturesRoutingModule,
+    SharedModule
   ]
 })
 export class FeaturesModule { }
