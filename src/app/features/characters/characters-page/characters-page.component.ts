@@ -9,13 +9,13 @@ import { DataApiService } from '../../../core/services/data-api.service';
 })
 export class CharactersPageComponent implements OnInit{
   private dataService = inject( DataApiService );
-  charater: ICharacter[] = [];
+  character: ICharacter[] = [];
 
   ngOnInit(): void {
     this.dataService.getCharacter().subscribe(
     (data) => {
-      this.charater = data;
-      console.log( 'holi', this.charater );
+      this.character = data;
+      console.log( 'holi', this.character );
       
     }
     )

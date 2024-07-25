@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-generic-card',
@@ -6,5 +6,15 @@ import { Component } from '@angular/core';
   styleUrl: './generic-card.component.scss'
 })
 export class GenericCardComponent {
+  @Input() title: string = '';
+  @Input() imagenUrl: string = '';
+  @Input() texto: string = '';
 
+  @Input() imageCard: string = '';
+  @Input() titlePrincipal: string = '';
+  @Input() firstInformation: string | number = '';
+  @Input() secondInformation?: string | number = '';
+  @Input() dateInformation: string = '';
+  @Input() viewButton: boolean = true;
+  @Input() textButton: string = '';
 }

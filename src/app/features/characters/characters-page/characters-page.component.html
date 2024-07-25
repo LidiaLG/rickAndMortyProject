@@ -1,4 +1,9 @@
-<p>hola</p>
-<section>
-    <app-generic-card></app-generic-card>
-</section>
+
+<div class="card">
+        <app-generic-card *ngFor="let item of character" 
+                [imageCard]="item.image"
+                [titlePrincipal]="item.name"
+                [firstInformation]="item.species"
+        />
+    
+</div>

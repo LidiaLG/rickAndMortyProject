@@ -6,6 +6,7 @@ import { GenericCardComponent } from './components/generic-card/generic-card.com
 import { GenericTableComponent } from './components/generic-table/generic-table.component';
 import { WordLimitPipe } from './pipes/word-limit.pipe';
 import { DateFormatPipe } from './pipes/date-format.pipe';
+import { HoverElementDirective } from './directives/hover-element.directive';
 
 
 @NgModule({
@@ -16,6 +17,7 @@ import { DateFormatPipe } from './pipes/date-format.pipe';
     GenericTableComponent,
     WordLimitPipe,
     DateFormatPipe,
+    HoverElementDirective,
   ],
   imports: [
     CommonModule
@@ -24,7 +26,8 @@ import { DateFormatPipe } from './pipes/date-format.pipe';
     Error404PageComponent,
     DirectionBtnComponent,
     GenericCardComponent,
-    GenericTableComponent
+    GenericTableComponent,
+    HoverElementDirective
   ]
 })
 export class SharedModule { }
